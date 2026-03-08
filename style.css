@@ -1,0 +1,415 @@
+/* ==================================================
+   THE BLUE REVIEWER - Complete Theme Styles
+   Version: 1.4
+   Inspired by TechRadar
+================================================== */
+
+/* ------------------------
+   1. General / Body Styles
+------------------------- */
+body { 
+    background-color: #ffffff; /* Light background like review sites */
+    color: #222222; 
+    font-family: 'Segoe UI', Arial, sans-serif; 
+    font-size: 18px; 
+    line-height: 1.7; 
+    margin: 0; 
+    padding: 0; 
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #111111;
+    margin-top: 1.4em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+h1 { font-size: 2.4rem; }
+h2 { font-size: 2.0rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.4rem; }
+
+p {
+    margin: 0 0 1.2em;
+}
+
+a {
+    color: #0071e3; 
+    text-decoration: underline;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul, ol {
+    margin: 0 0 1.2em 1.5em;
+    padding: 0;
+}
+
+blockquote {
+    border-left: 4px solid #ddd;
+    padding-left: 15px;
+    color: #555;
+    margin: 1em 0;
+}
+
+.btn-primary {
+    background-color: #0071e3;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* ------------------------
+   2. Header Styles
+------------------------- */
+.site-header {
+    background-color: #1a1a1a;
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #333;
+}
+
+.header-main-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.brand-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand-name {
+    font-size: 24px;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.brand-name a {
+    color: #007bff;
+}
+
+.nav-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-bar li {
+    display: inline-block;
+}
+
+.nav-bar a {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.nav-bar a:hover {
+    color: #007bff;
+}
+
+/* Action bar */
+.action-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+    gap: 20px;
+}
+
+.search-wrap input[type="search"],
+.search-wrap input[type="text"] {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background: #333;
+    color: #fff;
+    width: 250px;
+}
+
+.subscribe-wrap form {
+    display: flex;
+    gap: 5px;
+}
+
+.subscribe-wrap input[type="email"] {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background: #333;
+    color: #fff;
+}
+
+.btn-subscribe {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-subscribe:hover {
+    background-color: #0056b3;
+}
+
+/* ------------------------
+   3. Ticker Styles
+------------------------- */
+.ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.ticker-move {
+    white-space: nowrap;
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+/* ------------------------
+   4. Posts / Review Layout
+------------------------- */
+.content-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 40px auto;
+    gap: 30px;
+    padding: 0 15px;
+}
+
+.main-content {
+    flex: 0 1 70%;
+}
+
+.sidebar {
+    flex: 0 1 28%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.posts-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.post-card {
+    background-color: #ffffff;
+    color: #222222;
+    border-radius: 5px;
+    overflow: hidden;
+    flex: 0 1 calc(50% - 12.5px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+}
+
+.post-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.post-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 15px;
+}
+
+.post-excerpt {
+    font-size: 1rem;
+    margin: 0 15px 15px;
+    color: #555555;
+}
+
+.read-more-btn {
+    display: inline-block;
+    margin: 0 15px 15px;
+    padding: 8px 12px;
+    background-color: #0071e3;
+    color: #ffffff;
+    border-radius: 3px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.read-more-btn:hover {
+    background-color: #0056b3;
+}
+
+/* ------------------------
+   5. Footer Styles
+------------------------- */
+.site-footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 60px 5% 40px;
+    border-top: 1px solid #333333;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 5%;
+    margin-bottom: 60px;
+}
+
+.footer-brand-column {
+    flex: 1.5;
+    min-width: 300px;
+}
+
+.footer-logo {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #007bff;
+}
+
+.footer-tagline {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #eeeeee;
+    max-width: 500px;
+    margin-bottom: 25px;
+}
+
+.footer-cta {
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.social-row {
+    display: flex;
+    column-gap: 20px;
+}
+
+.social-row a {
+    font-size: 24px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.social-row a:hover {
+    color: #007bff;
+}
+
+.footer-links-column {
+    flex: 2;
+    display: flex;
+    column-gap: 40px;
+}
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu li { margin-bottom: 12px; }
+
+.footer-menu a {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    transition: text-decoration 0.3s;
+}
+
+.footer-menu a:hover { text-decoration: underline; }
+
+.footer-legal {
+    border-top: 1px solid #333333;
+    padding-top: 40px;
+    font-size: 14px;
+    color: #888888;
+}
+
+.legal-nav {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 10px;
+    margin: 15px 0;
+}
+
+.legal-nav a {
+    color: #888888;
+    text-decoration: none;
+}
+
+.legal-nav a:hover {
+    color: #ffffff;
+}
+
+.disclosure {
+    margin-top: 20px;
+    font-size: 12px;
+    max-width: 800px;
+    line-height: 1.4;
+}
+
+/* ------------------------
+   6. Responsive Styles
+------------------------- */
+@media (max-width: 992px) {
+    .post-card { flex: 0 1 100%; }
+    .content-wrap { flex-direction: column; }
+    .sidebar { flex: 0 1 100%; margin-top: 30px; }
+    .footer-grid { flex-direction: column; row-gap: 40px; }
+    .footer-links-column { flex-direction: column; row-gap: 40px; }
+}
+
+@media (max-width: 600px) {
+    .search-wrap input[type="search"],
+    .search-wrap input[type="text"],
+    .subscribe-wrap input[type="email"],
+    .subscribe-wrap form { width: 100%; }
+}
